@@ -15,3 +15,5 @@ gradle-app.setting
 /.settings/
 /bin/
 /todos.txt
+/.classpath
+/.project

@@ -29,8 +29,6 @@ public class JettyServer {
 
 		WebAppContext webAppContext = new WebAppContext();
 		webAppContext.setContextPath("/");
-		//String webxmlLocation = JettyServer.class.getResource("/webapp/WEB-INF/web.xml").toString();
-		//webAppContext.setDescriptor(webxmlLocation);
 
 		String resLocation = JettyServer.class.getResource("/webapp").toString();
 		webAppContext.setResourceBase(resLocation);
