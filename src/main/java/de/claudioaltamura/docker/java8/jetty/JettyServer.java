@@ -29,8 +29,8 @@ public class JettyServer {
 
 		WebAppContext webAppContext = new WebAppContext();
 		webAppContext.setContextPath("/");
-		String webxmlLocation = JettyServer.class.getResource("/webapp/WEB-INF/web.xml").toString();
-		webAppContext.setDescriptor(webxmlLocation);
+		//String webxmlLocation = JettyServer.class.getResource("/webapp/WEB-INF/web.xml").toString();
+		//webAppContext.setDescriptor(webxmlLocation);
 
 		String resLocation = JettyServer.class.getResource("/webapp").toString();
 		webAppContext.setResourceBase(resLocation);
@@ -51,6 +51,11 @@ public class JettyServer {
 	public void stop() throws Exception {
 		server.stop();
 		server.join();
+	}
+	
+	public static void main(String[] args) throws Exception {
+		JettyServer jettyServer = new JettyServer(8080);
+		jettyServer.start();
 	}
 
 }
