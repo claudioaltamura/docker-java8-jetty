@@ -57,7 +57,8 @@ dependencies {
 docker {
     javaApplication {
         baseImage = 'openjdk:latest'
-        tag = 'helloworldservlet'
+        tag = 'helloworldservlet-0.2.0'
+        ports = [8080, 8080]
     }
 }
 
